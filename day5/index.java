@@ -13,8 +13,12 @@ interface Hello {
 }
 
 interface Person extends Hello {
-    void run();
+    // void run();
     String getName();
+    // default方法
+    default void run() {
+        System.out.println(getName() + " run");
+    }
 }
 
 class Student implements Person {
